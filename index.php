@@ -21,16 +21,12 @@ require('plan.php');
         <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
 
             <label>username: </label>
-            <input type="text" name="username" 
-            value="<?php echo htmlspecialchars($_POST['username'] ?? '') ?>"
-            >
+            <input type="text" name="username" value="<?php echo htmlspecialchars($_POST['username'] ?? '') ?>">
             <div>
                 <?php
                 $subButton = false;
                 if (isset($_POST['username'])) {
                     // validate entries
-
-
 
                     $server_1 = new Server('Server 1', '192.168.0.1', 'fail');
 
@@ -52,9 +48,6 @@ require('plan.php');
                         echo $server_2->ipAddress . '<br>';
                         echo $server_2->status . '<br>' . '<br>';
                     }
-
-
-                    // if errors is empty --> save data to db
                 }
                 ?>
                 <div>
